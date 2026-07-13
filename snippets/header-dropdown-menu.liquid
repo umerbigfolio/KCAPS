@@ -88,7 +88,7 @@
               aria-current="page"
             {% endif %}
           >
-            <span
+            <span {% if link.title contains 'Home' %}home_link{% endif %}
               {%- if link.current %}
                 class="header__active-menu-item"
               {% endif %}

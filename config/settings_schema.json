@@ -125,6 +125,21 @@
         "default": 100
       },
       {
+        "type": "checkbox",
+        "label": "Use Custom Heading Font(Theme font sizes will not work if this enabled)",
+        "id": "custom_heading_font"
+      },
+      {
+        "type": "range",
+        "id": "headings_font_size",
+        "min": 24,
+        "max": 150,
+        "step": 6,
+        "label": "Headings Font Size",
+        "default": 48,
+        "unit": "px",
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__2.content"
       },
@@ -154,7 +169,7 @@
         "id": "page_width",
         "min": 1000,
         "max": 1600,
-        "step": 100,
+        "step": 40,
         "default": 1200,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
@@ -262,7 +277,7 @@
         "type": "range",
         "id": "buttons_radius",
         "min": 0,
-        "max": 40,
+        "max": 60,
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",

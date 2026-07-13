@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: url('https://cdn.shopify.com/s/files/1/0777/0170/9871/files/HelveticaNeueCyr-Medium.woff?v=1783951934') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueRegular';
+  src: url('https://cdn.shopify.com/s/files/1/0777/0170/9871/files/HelveticaNeueCyr-Roman.woff?v=1783969053') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer-Regular';
+  src: url('https://cdn.shopify.com/s/files/1/0777/0170/9871/files/Switzer-Regular.woff?v=1783953565') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

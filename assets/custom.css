@@ -1,0 +1,60 @@
+.announcement-bar-section {
+    margin: 0 20px;
+    border-radius: 8px;
+}
+
+.announcement-bar-section .utility-bar {
+    border-radius: 8px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.announcement-bar-section .page-width.utility-bar__grid {
+    max-width: 1400px;
+}
+
+.header--middle-left .list-menu__item:has([home_link]) {
+    padding: 0;
+}
+
+.header--middle-left .list-menu__item [home_link] {
+    background: #ECE874;
+    border-radius: 31px;
+    padding: 11px 16px;
+}
+
+.header.header--middle-left .list-menu--inline {
+    align-items: center;
+    padding: 4px 11px 4px 4px;
+}
+
+.header__menu-item:has([home_link]) {
+    padding: 4px;
+}
+
+.header__menu-item span {
+    font-family: 'Switzer-Regular';
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.header__button .button {
+    padding: 13px 18px 13px 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    gap: 12px;
+    margin: 0;
+}
+
+.section-header.scrolled-past-header .header-wrapper .header {
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.section.shopify-section {
+    box-shadow: 4px 14px 15px 0px #00000012;
+}
