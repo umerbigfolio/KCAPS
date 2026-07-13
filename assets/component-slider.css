@@ -249,12 +249,12 @@ slider-component.slider-component-full-width {
 
 @media screen and (min-width: 750px) {
   .slider-counter--dots {
-    margin: 0 1.2rem;
+    margin: 0 8px;
   }
 }
 
 .slider-counter__link {
-  padding: 1rem;
+  padding: 2px;
 }
 
 @media screen and (max-width: 749px) {
@@ -264,16 +264,18 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link--dots .dot {
-  width: 1rem;
-  height: 1rem;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.5);
+  border: none;
   padding: 0;
   display: block;
+  background: gray;
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
-  background-color: rgb(var(--color-foreground));
+  background-color: rgb(var(--color-button));
+  width: 14px;
 }
 
 @media screen and (forced-colors: active) {
@@ -374,4 +376,9 @@ slider-component.slider-component-full-width {
 
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
+}
+
+slideshow-component .svg-wrapper {
+  width: 12px;
+  height: 12px;
 }

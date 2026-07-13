@@ -247,6 +247,26 @@
     ]
   },
   {
+    "name": "Sections Border Radius",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_section_border_radius",
+        "label": "Enable Section Border Radius"
+      },
+      {
+        "type": "range",
+        "id": "section_border_radius",
+        "label": "Section Border Radius",
+        "min": 0,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "default": 20
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.buttons.name",
     "settings": [
       {

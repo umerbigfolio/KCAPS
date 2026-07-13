@@ -279,6 +279,13 @@
           font-size: 1.6rem;
         }
       }
+
+      {% if settings.enable_section_border_radius %}
+        /* .section.shopify-section, */
+        .section.shopify-section .page-width .slideshow.banner {
+          border-radius: {{ settings.section_border_radius }}px;
+        }
+      {% endif %}  
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}

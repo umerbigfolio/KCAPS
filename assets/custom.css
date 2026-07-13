@@ -48,6 +48,7 @@
     text-transform: uppercase;
     gap: 12px;
     margin: 0;
+    font-family: 'HelveticaNeueRegular';
 }
 
 .section-header.scrolled-past-header .header-wrapper .header {
@@ -55,6 +56,6 @@
     border-radius: 8px;
 }
 
-.section.shopify-section {
+/* .section.shopify-section {
     box-shadow: 4px 14px 15px 0px #00000012;
-}
+} */
