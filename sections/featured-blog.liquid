@@ -24,34 +24,54 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
-    {%- unless section.settings.heading == blank -%}
-      <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-        <h2
-          id="SectionHeading-{{ section.id }}"
-          class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-          {% endif %}
-        >
-          {{ section.settings.heading }}
-        </h2>
+<div class="blog page-width gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+  <div class="global-section-radius page-width color-{{ section.settings.color_scheme }} isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+    <div class="heading-button-hodler">
+      <div class="heading_and_text_holder">
+        {%- unless section.settings.heading == blank -%}
+          <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+            <h2
+              id="SectionHeading-{{ section.id }}"
+              class="blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+              {% endif %}
+            >
+              {{ section.settings.heading }}
+            </h2>
 
-        {%- if section.settings.blog != blank
-          and section.settings.show_view_all
-          and section.settings.post_limit < section.settings.blog.articles_count
-        -%}
-          <a
-            href="{{ section.settings.blog.url }}"
-            class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          >
-            {{ 'sections.featured_blog.view_all' | t }}
-          </a>
-        {%- endif -%}
+            {%- if section.settings.blog != blank
+              and section.settings.show_view_all
+              and section.settings.post_limit < section.settings.blog.articles_count
+            -%}
+              <a
+                href="{{ section.settings.blog.url }}"
+                class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              >
+                {{ 'sections.featured_blog.view_all' | t }}
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endunless -%}
+
+        {% if section.settings.text != blank %}
+          <div class="blog-header-text__text h5">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}    
       </div>
-    {%- endunless -%}
-
+      <div class="blog-header__button">
+        {% if section.settings.button_label != blank %}
+          <a
+            href="{{ section.settings.button_link }}"
+            class="custom-section__button button button--secondary h4"
+          >
+            {{ section.settings.button_label }}
+            {% render 'simple-button-icon' %}
+          </a>
+        {% endif %}
+    </div>  
+  </div>
     <slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
         id="Slider-{{ section.id }}"
@@ -116,7 +136,7 @@
                         <h3 class="card__heading h2">
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
-                        <p class="article-card__excerpt rte-width">
+                        <p class="article-card__excerpt h5 rte-width">
                           {{ 'sections.featured_blog.onboarding_content' | t }}
                         </p>
                       </div>
@@ -127,7 +147,7 @@
                       <h3 class="card__heading h2">
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>
-                      <p class="article-card__excerpt rte-width">
+                      <p class="article-card__excerpt h5 rte-width">
                         {{ 'sections.featured_blog.onboarding_content' | t }}
                       </p>
                     </div>
@@ -249,6 +269,23 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Hear what our clients say about working with us and their success stories."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
     },
     {
       "type": "header",

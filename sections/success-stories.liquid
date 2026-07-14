@@ -1,0 +1,294 @@
+{{ 'success-stories.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="page-width success-stories__page-width"
+  style="
+    --success-stories-padding-top: {{ section.settings.padding_top }}px;
+    --success-stories-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div
+    class="success-stories color-{{ section.settings.color_scheme }} global-section-radius"
+    style="
+      background: {{ section.settings.section_background }};
+      padding:
+        {{ section.settings.content_padding_top }}px
+        {{ section.settings.content_padding_right }}px
+        {{ section.settings.content_padding_bottom }}px
+        {{ section.settings.content_padding_left }}px;
+    "
+  >
+
+    <div class="success-stories__header">
+
+      <div class="success-stories__header-content">
+
+        {% if section.settings.heading != blank %}
+          <h2 class="success-stories__heading h2">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <div class="success-stories__text h5">
+            {{ section.settings.text }}
+          </div>
+        {% endif %}
+
+      </div>
+
+      <div class="success-stories__slider-controls no-js-hidden">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'slider-prev-icon' %}
+        </button>
+
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'slider-next-arrow' %}
+        </button>
+      </div>
+
+    </div>
+
+    <slider-component class="success-stories__slider">
+
+      <ul
+        id="Slider-{{ section.id }}"
+        class="success-stories__list slider slider--desktop grid grid--3-col-desktop grid--1-col-tablet-down"
+        role="list"
+        aria-label="{{ section.settings.heading }}"
+      >
+
+        {% for block in section.blocks %}
+
+          <li
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="success-stories__slide grid__item slider__slide"
+            {{ block.shopify_attributes }}
+          >
+
+            <article
+              class="success-stories__card"
+              style="
+                background: {{ section.settings.card_background }};
+                border-radius: {{ section.settings.card_radius }}px;
+              "
+            >
+
+              {% if block.settings.icon != blank %}
+                <div class="success-stories__icon">
+                  {{
+                    block.settings.icon
+                    | image_url: width: 48
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '24,48',
+                      class: 'success-stories__icon-image'
+                  }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.review != blank %}
+                <div class="success-stories__review h5">
+                  {{ block.settings.review }}
+                </div>
+              {% endif %}
+
+              {% if block.settings.company != blank %}
+                <div class="success-stories__company">
+                  <span class="success-stories__company-name h5">
+                    {{ block.settings.company }}
+                  </span>
+                </div>
+              {% endif %}
+
+            </article>
+
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </slider-component>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Success Stories",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Success From - Their Word"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Hear what our clients say about working with us and their success stories."
+    },
+    {
+      "type": "header",
+      "content": "Content Padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Left"
+    },
+    {
+      "type": "header",
+      "content": "Review Cards"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#F6F5F1"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16,
+      "label": "Card Border Radius"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40,
+      "label": "Bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Quote Icon"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review",
+          "default": "K-CAPS® Are Free Of Preservatives, Allergens And Starches. We Guide You Through The Process That Incorporates Your Brand Preferences."
+        },
+        {
+          "type": "text",
+          "id": "company",
+          "label": "Company Name",
+          "default": "Pharmaceutical Company"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Success Stories",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

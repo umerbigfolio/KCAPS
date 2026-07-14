@@ -10,6 +10,8 @@
 
 .blog__title {
   margin: 0;
+  line-height: 120%;
+  letter-spacing: -1%;
 }
 
 .blog__posts.articles-wrapper {
@@ -57,4 +59,17 @@
       margin-left: var(--grid-desktop-horizontal-spacing);
     }
   }
+}
+
+/* custom css  */
+.heading-button-hodler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-card-wrapper .card__heading.h2 {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -2%;
 }

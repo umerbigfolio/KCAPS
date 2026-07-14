@@ -1,0 +1,127 @@
+.contact-experts-section {
+    padding-top: var(--contact-experts-padding-top);
+    padding-bottom: var(--contact-experts-padding-bottom);
+}
+
+.contact-experts {
+  padding-top: var(--contact-experts-content-padding-top);
+  padding-bottom: var(--contact-experts-content-padding-bottom);
+  padding-left: var(--contact-experts-content-padding-left);
+  padding-right: var(--contact-experts-content-padding-right);
+}
+
+.contact-experts__content {
+  display: flex;
+  column-gap: 40px;
+  padding: var(--content-padding-top) var(--content-padding-right) var(--content-padding-bottom)
+    var(--content-padding-left);
+  background: var(--section-background);
+}
+
+.contact-experts__heading {
+  margin: 0;
+  padding-bottom: 12px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+.contact-experts__text {
+  max-width: 509px;
+  margin: 0;
+  padding-bottom: 32px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #000000;
+  opacity: 70%;
+}
+
+.contact-experts__media {
+  display: flex;
+}
+
+.contact-experts__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--image-radius);
+}
+
+.contact-experts__image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f5f1;
+  border-radius: var(--image-radius);
+}
+
+.contact-experts__image-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-experts__image-column,
+.contact-experts__form-column {
+    width: 50%;
+}
+
+.contact-experts__form-column .field:after {
+   box-shadow: none;
+   border: 1px solid #EEEEEE;
+}
+
+.contact-experts__form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.field:has([name="contact[Name]"]) {
+    width: 100%;
+}
+
+.contact-experts__form .field__label {
+    color: #8D8D8D;
+}
+
+.contact-experts__form .contact__fields {
+    width: 100%;
+}
+
+@media screen and (max-width: 989px) {
+  .contact-experts__content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .contact-experts__form,
+  .contact-experts__media {
+    width: 100%;
+  }
+
+  .contact-experts__image-placeholder {
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .contact-experts__content {
+    padding: 20px;
+    row-gap: 24px;
+  }
+
+  .contact-experts__heading {
+    padding-bottom: 10px;
+  }
+
+  .contact-experts__text {
+    padding-bottom: 24px;
+  }
+
+  .contact-experts__image-placeholder {
+    min-height: 350px;
+  }
+}
