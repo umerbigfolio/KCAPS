@@ -1,9 +1,9 @@
 {{ 'why-choose-capsules.css' | asset_url | stylesheet_tag }}
 
-<div class="why-choose-capsules color-{{ section.settings.color_scheme }}">
+<div class="why-choose-capsules">
   <div class="page-width">
     <div
-      class="why-choose-capsules__content global-section-radius"
+      class="why-choose-capsules__content global-section-radius color-{{ section.settings.color_scheme }}"
       style="
         background: {{ section.settings.section_background }};
         padding-top: {{ section.settings.content_padding_top }}px;
@@ -21,9 +21,10 @@
         {% if section.settings.button_label != blank %}
           <a
             href="{{ section.settings.button_link }}"
-            class="button button--secondary why-choose-capsules__button h4"
+            class="custom-section__button button button--secondary why-choose-capsules__button h4"
           >
             {{ section.settings.button_label }}
+            {% render 'simple-button-icon' %}
           </a>
         {% endif %}
 

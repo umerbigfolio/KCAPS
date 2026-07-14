@@ -1,0 +1,373 @@
+{{ 'applications-showcase.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width applications-showcase"
+   style="
+    --applications-showcase-padding-top: {{ section.settings.section_padding_top }}px;
+    --applications-showcase-padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  ">
+  <div
+    class="applications-showcase color-{{ section.settings.color_scheme }} global-section-radius"
+    style="
+      background: {{ section.settings.section_background }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-right: {{ section.settings.padding_right }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: {{ section.settings.padding_left }}px;
+    "
+  >
+
+    <div class="applications-showcase__header">
+
+      <div class="applications-showcase__heading">
+        {% if section.settings.heading != blank %}
+          <h2 class="h2">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+      </div>
+
+      <div class="applications-showcase__text h5">
+        {{ section.settings.text }}
+      </div>
+
+    </div>
+
+    <div class="applications-showcase__content">
+
+      <div class="applications-showcase__image-column">
+
+        {% for block in section.blocks %}
+          {% if block.type == 'image_card' %}
+
+            <div
+              class="applications-showcase__image-card"
+              {{ block.shopify_attributes }}
+            >
+
+              {% if block.settings.image != blank %}
+                <div class="applications-showcase__image-wrapper">
+                  {{
+                    block.settings.image
+                    | image_url: width: 900
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'applications-showcase__image'
+                  }}
+                </div>
+              {% endif %}
+
+              <div
+                class="applications-showcase__overlay"
+                style="background: {{ block.settings.overlay_background }};"
+              >
+
+                <div class="applications-showcase__overlay-inner">
+
+                  <div class="applications-showcase__overlay-top">
+
+                    {% if block.settings.icon != blank %}
+                      <div class="applications-showcase__icon">
+                        {{
+                          block.settings.icon
+                          | image_url: width: 190
+                          | image_tag:
+                            loading: 'lazy',
+                            class: 'applications-showcase__icon-image'
+                        }}
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.overlay_title != blank %}
+                      <div class="applications-showcase__overlay-title">
+                        {{ block.settings.overlay_title }}
+                      </div>
+                    {% endif %}
+
+                  </div>
+
+                  <div class="applications-showcase__overlay-bottom">
+
+                    {% if block.settings.number != blank %}
+                      <div class="applications-showcase__number">
+                        {{ block.settings.number }}
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.number_text != blank %}
+                      <div class="applications-showcase__number-text">
+                        {{ block.settings.number_text }}
+                      </div>
+                    {% endif %}
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+      </div>
+
+      <div class="applications-showcase__accordion-column">
+
+        {% for block in section.blocks %}
+          {% if block.type == 'accordion' %}
+
+            <div
+              class="applications-showcase__accordion-item"
+              {{ block.shopify_attributes }}
+            >
+
+              <details
+                id="Details-{{ block.id }}-{{ section.id }}"
+                {% if section.settings.open_first_item and forloop.first %}
+                  open
+                {% endif %}
+              >
+
+                <summary
+                  id="Summary-{{ block.id }}-{{ section.id }}"
+                  class="applications-showcase__summary"
+                >
+
+                  <h3 class="applications-showcase__summary-title">
+                    {{ block.settings.heading }}
+                  </h3>
+
+                  {% render 'icon-arrow-right' %}
+
+                </summary>
+
+                <div
+                  class="applications-showcase__accordion-content rte"
+                  id="Accordion-{{ block.id }}-{{ section.id }}"
+                  role="region"
+                  aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                >
+
+                  {{ block.settings.content }}
+
+                </div>
+
+              </details>
+
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Applications Showcase",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Section Spacing"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_top",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "default": 40,
+        "label": "Top Padding"
+    },
+    {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "default": 40,
+        "label": "Bottom Padding"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_item",
+      "label": "Open first accordion",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Applications"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Describe your applications here.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Left"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_card",
+      "name": "Image Card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Main image"
+        },
+        {
+          "type": "range",
+          "id": "image_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "default": 16,
+          "label": "Image border radius"
+        },
+        {
+          "type": "color",
+          "id": "overlay_background",
+          "label": "Overlay background",
+          "default": "rgba(255,255,255,0.17)"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "overlay_title",
+          "label": "Title",
+          "default": "Trusted Worldwide"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Large number",
+          "default": "20+"
+        },
+        {
+          "type": "text",
+          "id": "number_text",
+          "label": "Bottom text",
+          "default": "Years of Experience"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Accordion Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Add accordion content here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Applications Showcase",
+      "blocks": [
+        {
+          "type": "image_card"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

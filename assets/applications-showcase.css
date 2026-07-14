@@ -1,0 +1,235 @@
+.applications-showcase {
+  position: relative;
+}
+
+.applications-showcase__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+  padding-bottom: 32px;
+}
+
+.applications-showcase__heading {
+  flex: 1;
+}
+
+.applications-showcase__heading .h2 {
+  margin: 0;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+.applications-showcase__text {
+    flex: 0 0 509px;
+    max-width: 509px;
+    color: #000;
+    line-height: 24px;
+    letter-spacing: 0;
+    opacity: 70%;
+    font-family: 'HelveticaNeueRegular';
+}
+
+.applications-showcase__text p {
+  margin: 0;
+}
+
+.applications-showcase__content {
+  display: flex;
+  column-gap: 40px;
+  align-items: flex-start;
+}
+
+.applications-showcase__image-column,
+.applications-showcase__accordion-column {
+  flex: 0 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+.applications-showcase__image-card {
+  position: relative;
+}
+
+.applications-showcase__image-wrapper {
+  line-height: 0;
+}
+
+.applications-showcase__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.applications-showcase__overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  width: calc(100% - 64px);
+  max-width: 596px;
+  border-radius: 32px;
+  backdrop-filter: blur(8px);
+}
+
+.applications-showcase__overlay-inner {
+  padding: 26px;
+}
+
+.applications-showcase__icon {
+  width: 95px;
+  margin-bottom: 9px;
+}
+
+.applications-showcase__icon-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.applications-showcase__overlay-title {
+  font-family: "HelveticaNeueRegular", sans-serif;
+  font-size: 24px;
+  line-height: 40.65px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.applications-showcase__overlay-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.applications-showcase__number {
+  font-family: "HelveticaNeueRegular", sans-serif;
+  font-size: 79.93px;
+  line-height: 169%;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.applications-showcase__number-text {
+  font-family: "HelveticaNeueRegular", sans-serif;
+  font-size: 24px;
+  line-height: 40.65px;
+  letter-spacing: 0;
+  color: #ffffff;
+  position: relative;
+  top: -20px;
+}
+
+.applications-showcase__accordion-item {
+  width: 100%;
+}
+
+.applications-showcase__accordion-item details {
+  border-bottom: 0.6px solid #dfe1e6;
+}
+
+.applications-showcase__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.applications-showcase__summary::-webkit-details-marker {
+  display: none;
+}
+
+.applications-showcase__summary-title {
+  margin: 0;
+  font-family: "HelveticaNeueRegular", sans-serif;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.applications-showcase__summary .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.applications-showcase__accordion-item details[open] .applications-showcase__summary .icon {
+  transform: rotate(180deg);
+}
+
+.applications-showcase__accordion-content {
+  padding: 0 0 24px;
+}
+
+.applications-showcase__accordion-content p:first-child {
+  margin-top: 0;
+}
+
+.applications-showcase__accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+.page-width.applications-showcase {
+  padding-top: var(--applications-showcase-padding-top);
+  padding-bottom: var(--applications-showcase-padding-bottom);
+}
+
+@media screen and (max-width: 989px) {
+  .applications-showcase__header {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+
+  .applications-showcase__text {
+    flex: initial;
+    max-width: 100%;
+  }
+
+  .applications-showcase__content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  .applications-showcase__image-column,
+  .applications-showcase__accordion-column {
+    flex: initial;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .applications-showcase__overlay {
+    width: calc(100% - 32px);
+    bottom: 16px;
+  }
+
+  .applications-showcase__overlay-inner {
+    padding: 20px;
+  }
+
+  .applications-showcase__overlay-title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .applications-showcase__number {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .applications-showcase__number-text {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .applications-showcase__summary-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}

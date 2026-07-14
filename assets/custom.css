@@ -81,3 +81,18 @@
     line-height: 120%;
     letter-spacing: -1%;
 }
+
+/* Custom section button  */
+.custom-section__button {
+    line-height: 22px;
+    letter-spacing: 0;
+    font-family: 'Switzer-Regular';
+    gap: 12px;
+}
+
+.custom-section__button::after {
+    border: 1px solid #E2E2E2;
+    box-shadow: none;
+    padding: 0 3rem;
+}
+
