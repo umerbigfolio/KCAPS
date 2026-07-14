@@ -195,16 +195,16 @@
           "background_gradient": "",
           "text": "#0d3827",
           "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button_label": "#0D3827",
           "secondary_button_label": "#000000",
           "shadow": "#121212"
         }
       },
       "scheme-29cba3d6-6753-4fd2-bea8-6cff4513a075": {
         "settings": {
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text": "#1A6F50",
+          "text": "#1a6f50",
           "button": "#1a6f50",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",

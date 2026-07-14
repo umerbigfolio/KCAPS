@@ -199,7 +199,7 @@
             "bottom_text": "<p>K-CAPS® are free of preservatives, allergens and starches and are NonGMO, Vegan certified and Kosher and Halal certified.</p>",
             "padding_top": 20,
             "padding_right": 28,
-            "padding_bottom": 28,
+            "padding_bottom": 24,
             "padding_left": 28
           }
         },
@@ -207,10 +207,10 @@
           "type": "image_card",
           "settings": {
             "image": "shopify://shop_images/image_30.jpg",
-            "padding_top": 20,
-            "padding_right": 20,
-            "padding_bottom": 20,
-            "padding_left": 20
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0
           }
         }
       },
@@ -222,17 +222,99 @@
       ],
       "name": "Why Choose Capsules",
       "settings": {
-        "color_scheme": "",
-        "section_background": "#FFFFFF",
+        "color_scheme": "scheme-5",
+        "section_background": "#ffffff",
         "heading": "Why Choose Our Capsules?",
-        "button_label": "Learn More",
-        "button_link": "",
+        "button_label": "Shop now",
+        "button_link": "#",
         "content_padding_top": 28,
         "content_padding_right": 20,
         "content_padding_bottom": 20,
         "content_padding_left": 20,
-        "card_background": "#F6F5F1",
+        "card_background": "#f6f5f1",
         "column_gap": 16
+      }
+    },
+    "applications_showcase_rXDa6W": {
+      "type": "applications-showcase",
+      "blocks": {
+        "accordion_yaLjUw": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_qnWHrr": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_6KYDHJ": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_yGVLq9": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_Edmy4B": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_43wiww": {
+          "type": "accordion",
+          "settings": {
+            "heading": "Accordion Title",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "image_card_JdbTft": {
+          "type": "image_card",
+          "settings": {
+            "image": "shopify://shop_images/5d420dbf601eb740d13ae38313ffdcb856df80a8.png",
+            "image_radius": 16,
+            "overlay_background": "#ffffff2b",
+            "icon": "shopify://shop_images/Frame_1000002711_1.png",
+            "overlay_title": "Trusted Worldwide",
+            "number": "50+",
+            "number_text": "Years of Experience"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_yaLjUw",
+        "accordion_qnWHrr",
+        "accordion_6KYDHJ",
+        "accordion_yGVLq9",
+        "accordion_Edmy4B",
+        "accordion_43wiww",
+        "image_card_JdbTft"
+      ],
+      "name": "Applications",
+      "settings": {
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "color_scheme": "scheme-5",
+        "section_background": "#ffffff",
+        "open_first_item": true,
+        "heading": "Applications",
+        "text": "<p>K-CAPS® are free of preservatives, allergens and starches. We guide you through the process that incorporates your brand preferences.</p>",
+        "padding_top": 28,
+        "padding_right": 20,
+        "padding_bottom": 20,
+        "padding_left": 20
       }
     }
   },
@@ -240,6 +322,7 @@
     "slideshow_87G6KQ",
     "certifications_znP4DB",
     "featured_collection_zTxwxT",
-    "why_choose_custom_sections_GkznMB"
+    "why_choose_custom_sections_GkznMB",
+    "applications_showcase_rXDa6W"
   ]
 }
