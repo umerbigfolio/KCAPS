@@ -150,6 +150,14 @@
   font-weight: 400;
 }
 
+.applications-showcase__accordion-item details svg {
+  transition: 0.3s ease-in-out;
+}
+
+.applications-showcase__accordion-item details[open] svg {
+    transform: rotate(85deg);
+}
+
 .applications-showcase__summary .icon {
   width: 18px;
   height: 18px;

@@ -211,15 +211,30 @@ slideshow-component:not(.page-width) .slider-buttons {
   margin: 0;
   font-family: 'HelveticaNeueRegular';
   text-transform: uppercase;
+  min-height: 52px;
+}
+
+.slideshow .banner__buttons .button:not(.slideshow-button-with-icon):hover {
+  background: transparent;
+  border-color: rgba(var(--color-button), var(--alpha-button-background));
+  color: rgba(var(--color-button), var(--alpha-button-background));
+  transition: 0.3s ease-in-out;
+}
+
+.slideshow .banner__buttons .button:not(.slideshow-button-with-icon):hover .icon path {
+  fill: rgba(var(--color-button), var(--alpha-button-background));
+  transition: 0.3s ease-in-out;
 }
 
 .slideshow .banner__buttons .slideshow-button-with-icon {
-    padding: 6px 15px;
     color: black;
     line-height: 100%;
     letter-spacing: 0;
     font-family: HelveticaNeueRegular;
     gap: 6px;
+    min-height: 29px;
+    text-transform: capitalize;
+    padding: 0 15px;
 }
 
 .slideshow-button-with-icon::after {
@@ -236,6 +251,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     letter-spacing: -3%;
     margin-top: 12px;
     color: rgba(var(--color-button));
+    color: #0D3827;
     text-transform: capitalize;
 }
 

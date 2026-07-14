@@ -374,7 +374,7 @@ h5,
 
 h6,
 .h6 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
 }
@@ -388,7 +388,7 @@ h6,
 
 blockquote {
   font-style: italic;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
   padding-left: 1rem;
 }
@@ -531,7 +531,7 @@ h6:empty {
 }
 
 .link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .link-with-icon {
@@ -1292,7 +1292,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
 }
 
-.button:not([disabled]):hover::after,
+/* .button:not([disabled]):hover::after,
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
@@ -1300,7 +1300,7 @@ button.shopify-payment-button__button--unbranded {
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
-}
+} */
 
 .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
@@ -1507,7 +1507,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .share-button__fallback button:hover .svg-wrapper {
@@ -1659,7 +1659,7 @@ details[open] > .share-button__fallback {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .field:hover.field:after,
@@ -1762,7 +1762,7 @@ details[open] > .share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -2186,6 +2186,7 @@ input[type='checkbox'] {
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
+  max-height: 30px;
 }
 
 .announcement-bar .slider--everywhere {
@@ -2277,7 +2278,7 @@ input[type='checkbox'] {
 
 .announcement-bar__message {
   text-align: center;
-  padding: 6px 0;
+  padding: 2px 0;
   margin: 0;
   letter-spacing: 0;
   min-height: 100%;
@@ -2479,7 +2480,7 @@ input[type='checkbox'] {
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .header__heading-logo {
@@ -2828,7 +2829,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 11px 16px;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground));
 }
 
 .header__menu-item:hover {
@@ -3517,14 +3518,14 @@ details-disclosure > details {
     transform: translateY(0);
   }
 
-  .animate--hover-vertical-lift .button:not([disabled]):hover:after,
+  /* .animate--hover-vertical-lift .button:not([disabled]):hover:after,
   .animate--hover-vertical-lift .customer button:not([disabled]):hover:after,
   .animate--hover-vertical-lift .shopify-payment-button__button:not([disabled]):hover:after {
     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
     box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
       0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
-  }
+  } */
 
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */

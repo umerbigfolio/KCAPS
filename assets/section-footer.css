@@ -342,7 +342,7 @@
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.6);
 }
 
 .footer-block__details-content .list-menu__item--link {
@@ -428,6 +428,10 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0;
+}
+
+.footer-block__brand-info .rte p {
+  opacity: 60%;
 }
 
 .footer-block:only-child .footer-block__brand-info {

@@ -91,6 +91,10 @@
     width: 100%;
 }
 
+.contact__button svg path {
+    fill: white;
+}
+
 @media screen and (max-width: 989px) {
   .contact-experts__content {
     flex-direction: column;

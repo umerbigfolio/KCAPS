@@ -249,7 +249,7 @@ slider-component.slider-component-full-width {
 
 @media screen and (min-width: 750px) {
   .slider-counter--dots {
-    margin: 0 8px;
+    margin: 0;
   }
 }
 
@@ -379,6 +379,6 @@ slider-component.slider-component-full-width {
 }
 
 slideshow-component .svg-wrapper {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 }

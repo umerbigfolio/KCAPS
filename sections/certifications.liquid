@@ -2,6 +2,8 @@
 
 {%- style -%}
   .certifications {
+    --certifications-section-padding-top: {{ section.settings.padding_top_section }}px;
+    --certifications-section-padding-bottom: {{ section.settings.padding_bottom_section }}px;
     --certifications-padding-top: {{ section.settings.padding_top }}px;
     --certifications-padding-bottom: {{ section.settings.padding_bottom }}px;
     --certifications-padding-horizontal: {{ section.settings.padding_horizontal }}px;
@@ -131,7 +133,7 @@
     },
     {
       "type": "header",
-      "content": "Section spacing"
+      "content": "Internal Content Padding"
     },
     {
       "type": "range",
@@ -161,6 +163,30 @@
       "step": 4,
       "unit": "px",
       "label": "Internal horizontal padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Section Main Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_section",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding Section",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_section",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding Section",
       "default": 40
     },
     {

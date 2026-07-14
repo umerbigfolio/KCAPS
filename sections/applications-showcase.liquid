@@ -124,9 +124,9 @@
 
               <details
                 id="Details-{{ block.id }}-{{ section.id }}"
-                {% if section.settings.open_first_item and forloop.first %}
+                {% comment %} {% if section.settings.open_first_item and forloop.first %}
                   open
-                {% endif %}
+                {% endif %} {% endcomment %}
               >
 
                 <summary

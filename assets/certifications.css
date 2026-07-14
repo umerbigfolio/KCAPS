@@ -1,6 +1,6 @@
 .certifications {
-  padding-top: var(--certifications-padding-top);
-  padding-bottom: var(--certifications-padding-bottom);
+  padding-top: var(--certifications-section-padding-top);
+  padding-bottom: var(--certifications-section-padding-bottom);
 }
 
 .certifications__content {
@@ -60,7 +60,8 @@
 
 .certifications__card:hover {
   background: var(--certifications-card-hover-background);
-  border: none;
+  border-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 
 .certifications__card-content {

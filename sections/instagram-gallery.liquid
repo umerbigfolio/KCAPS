@@ -25,13 +25,14 @@
         <div class="instagram-gallery__button-wrapper">
           <a
             href="{{ section.settings.button_link }}"
-            class="h6 button button--secondary instagram-gallery__button"
+            class="h6 button button--secondary instagram-gallery__button custom-section__button"
             {% if section.settings.button_link contains 'http' %}
               target="_blank"
               rel="noopener"
             {% endif %}
           >
             {{ section.settings.button_label }}
+            {% render 'insta-icon' %}
           </a>
         </div>
       {% endif %}
