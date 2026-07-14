@@ -1,0 +1,256 @@
+{{ 'certifications.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .certifications {
+    --certifications-padding-top: {{ section.settings.padding_top }}px;
+    --certifications-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --certifications-padding-horizontal: {{ section.settings.padding_horizontal }}px;
+    --certifications-card-background: {{ section.settings.card_background }};
+    --certifications-card-hover-background: {{ section.settings.card_hover_background }};
+    --certifications-card-border-color: {{ section.settings.card_border_color }};
+    --certifications-icon-color: {{ section.settings.icon_color }};
+    --certifications-icon-hover-color: {{ section.settings.icon_hover_color }};
+    --certifications-card-radius: {{ section.settings.card_radius }}px;
+  }
+{%- endstyle -%}
+
+<div class="">
+  <div class="page-width">
+    <div class="certifications">
+
+      <div class="certifications__content color-{{ section.settings.color_scheme }} gradient global-section-radius">
+
+        <div class="certifications__header">
+
+          <div class="certifications__heading">
+            {%- if section.settings.heading != blank -%}
+              <h2 class="h2">
+                {{ section.settings.heading }}
+              </h2>
+            {%- endif -%}
+          </div>
+
+          <div class="certifications__text">
+            {%- if section.settings.text != blank -%}
+              <div class="h5 rte">
+                {{ section.settings.text }}
+              </div>
+            {%- endif -%}
+          </div>
+
+        </div>
+
+        <div class="certifications__grid">
+
+          {%- for block in section.blocks -%}
+
+            <div
+              class="certifications__card"
+              {{ block.shopify_attributes }}
+            >
+
+              <div class="certifications__card-content">
+
+                <div class="certifications__icon">
+
+                  {%- if block.settings.image != blank -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 246
+                      | image_tag:
+                        widths: '123,246',
+                        loading: 'lazy',
+                        class: 'certifications__icon-image'
+                    }}
+                  {%- endif -%}
+
+                  {%- if block.settings.image_hover != blank -%}
+                    {{
+                      block.settings.image_hover
+                      | image_url: width: 246
+                      | image_tag:
+                        widths: '123,246',
+                        loading: 'lazy',
+                        class: 'certifications__icon-image-hover'
+                    }}
+                  {%- endif -%}
+
+                </div>
+
+                <div class="certifications__description">
+
+                  {%- if block.settings.description != blank -%}
+                    <div class="h6 rte">
+                      {{ block.settings.description }}
+                    </div>
+                  {%- endif -%}
+
+                </div>
+
+              </div>
+
+            </div>
+
+          {%- endfor -%}
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Certifications",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Certifications"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Internal horizontal padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_background",
+      "label": "Card hover background",
+      "default": "#0F664B"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color",
+      "default": "#E7E7E7"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#6E6E6E"
+    },
+    {
+      "type": "color",
+      "id": "icon_hover_color",
+      "label": "Icon hover color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "certification",
+      "name": "Certification",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Certification image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_hover",
+          "label": "Certification image Hover"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Certifications",
+      "blocks": [
+        {
+          "type": "certification"
+        },
+        {
+          "type": "certification"
+        },
+        {
+          "type": "certification"
+        },
+        {
+          "type": "certification"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
