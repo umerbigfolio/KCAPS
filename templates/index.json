@@ -316,6 +316,113 @@
         "padding_bottom": 20,
         "padding_left": 20
       }
+    },
+    "featured_blog_6PALzQ": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "Capsule Insights",
+        "heading_size": "h1",
+        "text": "Hear what our clients say about working with us and their success stories.",
+        "button_label": "Show More",
+        "button_link": "",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-5",
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "contact_experts_KtGDBP": {
+      "type": "contact-experts",
+      "name": "Contact Our Experts",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "section_background": "#ffffff",
+        "heading": "Contact Our Experts",
+        "text": "Need help choosing the right capsule size or customization?\nTell us about your requirements and our team will respond within 24 hours.",
+        "image": "shopify://shop_images/Image.jpg",
+        "image_radius": 20,
+        "content_padding_top": 20,
+        "content_padding_right": 20,
+        "content_padding_bottom": 20,
+        "content_padding_left": 20,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "instagram_gallery_eFrcCm": {
+      "type": "instagram-gallery",
+      "blocks": {
+        "image_gKTdNT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1.jpg",
+            "link": ""
+          }
+        },
+        "image_pkkKbg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_2.jpg",
+            "link": ""
+          }
+        },
+        "image_3f4tFz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1.jpg",
+            "link": ""
+          }
+        },
+        "image_8G8fWV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg",
+            "link": ""
+          }
+        },
+        "image_LWbJRL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_1.jpg",
+            "link": ""
+          }
+        },
+        "image_QmUQhR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_4.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_gKTdNT",
+        "image_pkkKbg",
+        "image_3f4tFz",
+        "image_8G8fWV",
+        "image_LWbJRL",
+        "image_QmUQhR"
+      ],
+      "name": "Instagram Gallery",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "section_bg": "#FFFFFF",
+        "heading": "@K-CAPS",
+        "button_label": "FOLLOW US",
+        "button_link": "#",
+        "padding_top": 28,
+        "padding_right": 20,
+        "padding_bottom": 20,
+        "padding_left": 20,
+        "image_radius": 16
+      }
     }
   },
   "order": [
@@ -323,6 +430,9 @@
     "certifications_znP4DB",
     "featured_collection_zTxwxT",
     "why_choose_custom_sections_GkznMB",
-    "applications_showcase_rXDa6W"
+    "applications_showcase_rXDa6W",
+    "featured_blog_6PALzQ",
+    "contact_experts_KtGDBP",
+    "instagram_gallery_eFrcCm"
   ]
 }

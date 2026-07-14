@@ -39,7 +39,7 @@
     "variant_pills_shadow_blur": 5,
     "inputs_border_thickness": 1,
     "inputs_border_opacity": 55,
-    "inputs_radius": 40,
+    "inputs_radius": 16,
     "inputs_shadow_opacity": 0,
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
@@ -109,12 +109,13 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p></p>",
-    "brand_image_width": 100,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
-    "social_tiktok_link": "",
+    "brand_description": "<p>Premium plant-based HPMC capsules trusted by supplement and pharmaceutical brands worldwide, delivering consistent quality, purity, and reliable performance.<br/><br/>Email us @ info@kcaps.comCall us at - 1-844-435-8337<br/><br/>© 2026, K-CAPS • Developed by Bigfolio LLC</p>",
+    "brand_image": "shopify://shop_images/Capa_1_1.png",
+    "brand_image_width": 120,
+    "social_facebook_link": "#",
+    "social_instagram_link": "#",
+    "social_youtube_link": "#",
+    "social_tiktok_link": "#",
     "social_twitter_link": "",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
@@ -194,8 +195,8 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#0d3827",
-          "button": "#ffffff",
-          "button_label": "#0D3827",
+          "button": "#1a6f50",
+          "button_label": "#ffffff",
           "secondary_button_label": "#000000",
           "shadow": "#121212"
         }
@@ -206,6 +207,17 @@
           "background_gradient": "",
           "text": "#1a6f50",
           "button": "#1a6f50",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "rgba(0,0,0,0)"
+        }
+      },
+      "scheme-70cec504-593c-4871-ab14-7ab959499e7d": {
+        "settings": {
+          "background": "#0f664b",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#1f654a",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "rgba(0,0,0,0)"
