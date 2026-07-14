@@ -15,7 +15,7 @@
         "slide_VaDVXM": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/image_23_0b297934-fda1-4d87-ab53-7bd8e4ff09df.png",
+            "image": "shopify://shop_images/image_banner.webp",
             "image_overlay_opacity": 0,
             "button_label_icon": "Available For Treatment",
             "link_icon": "",
@@ -121,6 +121,8 @@
         "padding_top": 32,
         "padding_bottom": 20,
         "padding_horizontal": 20,
+        "padding_top_section": 20,
+        "padding_bottom_section": 20,
         "card_background": "#ffffff",
         "card_hover_background": "#f6f7f1",
         "card_border_color": "#eeeeee",
@@ -224,7 +226,7 @@
       "settings": {
         "color_scheme": "scheme-5",
         "section_background": "#ffffff",
-        "heading": "Why Choose Our Capsules?",
+        "heading": "Why Choose K-CAPS® HPMC Capsules",
         "button_label": "Shop now",
         "button_link": "#",
         "content_padding_top": 28,
@@ -241,42 +243,42 @@
         "accordion_yaLjUw": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Supplements and Vitamins",
             "content": "<p>Add accordion content here.</p>"
           }
         },
         "accordion_qnWHrr": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Digestive Health",
             "content": "<p>Add accordion content here.</p>"
           }
         },
         "accordion_6KYDHJ": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Sports Nutrition",
             "content": "<p>Add accordion content here.</p>"
           }
         },
         "accordion_yGVLq9": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Beauty and Wellness",
             "content": "<p>Add accordion content here.</p>"
           }
         },
         "accordion_Edmy4B": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Clean Label",
             "content": "<p>Add accordion content here.</p>"
           }
         },
         "accordion_43wiww": {
           "type": "accordion",
           "settings": {
-            "heading": "Accordion Title",
+            "heading": "Herbal Production",
             "content": "<p>Add accordion content here.</p>"
           }
         },
@@ -287,9 +289,9 @@
             "image_radius": 16,
             "overlay_background": "#ffffff2b",
             "icon": "shopify://shop_images/Frame_1000002711_1.png",
-            "overlay_title": "Trusted Worldwide",
+            "overlay_title": "Global Capsule Applications",
             "number": "50+",
-            "number_text": "Years of Experience"
+            "number_text": "Industries Served"
           }
         }
       },
@@ -315,6 +317,60 @@
         "padding_right": 20,
         "padding_bottom": 20,
         "padding_left": 20
+      }
+    },
+    "success_stories_QVA3a8": {
+      "type": "success-stories",
+      "blocks": {
+        "review_pg4GFw": {
+          "type": "review",
+          "settings": {
+            "review": "K-CAPS® Are Free Of Preservatives, Allergens And Starches. We Guide You Through The Process That Incorporates Your Brand Preferences.",
+            "company": "Pharmaceutical Company"
+          }
+        },
+        "review_GnwgyB": {
+          "type": "review",
+          "settings": {
+            "review": "K-CAPS® Are Free Of Preservatives, Allergens And Starches. We Guide You Through The Process That Incorporates Your Brand Preferences.",
+            "company": "Pharmaceutical Company"
+          }
+        },
+        "review_ya4KEQ": {
+          "type": "review",
+          "settings": {
+            "review": "K-CAPS® Are Free Of Preservatives, Allergens And Starches. We Guide You Through The Process That Incorporates Your Brand Preferences.",
+            "company": "Pharmaceutical Company"
+          }
+        },
+        "review_73HKJD": {
+          "type": "review",
+          "settings": {
+            "review": "K-CAPS® Are Free Of Preservatives, Allergens And Starches. We Guide You Through The Process That Incorporates Your Brand Preferences.",
+            "company": "Pharmaceutical Company"
+          }
+        }
+      },
+      "block_order": [
+        "review_pg4GFw",
+        "review_GnwgyB",
+        "review_ya4KEQ",
+        "review_73HKJD"
+      ],
+      "name": "Success Stories",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "section_background": "#FFFFFF",
+        "heading": "Our Success From - Their Word",
+        "text": "Hear what our clients say about working with us and their success stories.",
+        "content_padding_top": 20,
+        "content_padding_right": 20,
+        "content_padding_bottom": 20,
+        "content_padding_left": 20,
+        "card_background": "#F6F5F1",
+        "card_radius": 16,
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "featured_blog_6PALzQ": {
@@ -413,7 +469,7 @@
       "name": "Instagram Gallery",
       "settings": {
         "color_scheme": "scheme-5",
-        "section_bg": "#FFFFFF",
+        "section_bg": "#ffffff",
         "heading": "@K-CAPS",
         "button_label": "FOLLOW US",
         "button_link": "#",
@@ -431,6 +487,7 @@
     "featured_collection_zTxwxT",
     "why_choose_custom_sections_GkznMB",
     "applications_showcase_rXDa6W",
+    "success_stories_QVA3a8",
     "featured_blog_6PALzQ",
     "contact_experts_KtGDBP",
     "instagram_gallery_eFrcCm"

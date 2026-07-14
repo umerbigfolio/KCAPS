@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/Capa_1.png",
-    "logo_width": 90,
+    "logo_width": 130,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "custom_heading_font": true,
@@ -185,7 +185,7 @@
           "background_gradient": "",
           "text": "#000000",
           "button": "#1a6f50",
-          "button_label": "#ffffff",
+          "button_label": "#FFFFFF",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
