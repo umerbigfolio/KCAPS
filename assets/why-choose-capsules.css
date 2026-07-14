@@ -1,0 +1,247 @@
+.why-choose-capsules__content {
+  padding-top: var(--content-padding-top);
+  padding-right: var(--content-padding-right);
+  padding-bottom: var(--content-padding-bottom);
+  padding-left: var(--content-padding-left);
+  background: var(--section-background);
+}
+
+.why-choose-capsules__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.why-choose-capsules__heading {
+  margin: 0;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+.why-choose-capsules__button {
+  flex-shrink: 0;
+}
+
+.why-choose-capsules__grid {
+  display: flex;
+  gap: var(--column-gap);
+}
+
+.why-choose-capsules__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--column-gap);
+}
+
+.why-choose-capsules__column--left {
+  flex: 0 0 333px;
+}
+
+.why-choose-capsules__column--center {
+  flex: 1;
+}
+
+.why-choose-capsules__column--right {
+  flex: 0 0 333px;
+}
+
+.why-choose-capsules__card {
+  background: var(--card-background);
+  border-radius: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.why-choose-capsules__card--core,
+.why-choose-capsules__card--stats {
+  min-height: 315px;
+}
+
+.why-choose-capsules__card--capsule {
+  min-height: 646px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.why-choose-capsules__card--image {
+  height: 646px;
+}
+
+.why-choose-capsules__core-heading {
+  margin: 0;
+  padding-bottom: 56px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.why-choose-capsules__feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.why-choose-capsules__feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.why-choose-capsules__feature-icon {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.why-choose-capsules__feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.why-choose-capsules__feature-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.why-choose-capsules__stats-number {
+  margin: 0 0 16px;
+  line-height: 26px;
+}
+
+.why-choose-capsules__stats-description {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.why-choose-capsules__stats-description p {
+  margin: 0;
+}
+
+.why-choose-capsules__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-choose-capsules__badge-image {
+  width: 165px;
+  margin-bottom: 12px;
+}
+
+.why-choose-capsules__badge-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.why-choose-capsules__badge-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.why-choose-capsules__capsule-top-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.why-choose-capsules__capsule-top-text p,
+.why-choose-capsules__capsule-bottom-text p {
+  margin: 0;
+}
+
+.why-choose-capsules__capsule-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.why-choose-capsules__arrow-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.why-choose-capsules__main-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.why-choose-capsules__capsule-bottom-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.why-choose-capsules__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1199px) {
+  .why-choose-capsules__grid {
+    flex-wrap: wrap;
+  }
+
+  .why-choose-capsules__column--left,
+  .why-choose-capsules__column--right {
+    flex: 0 0 calc(50% - (var(--column-gap) / 2));
+  }
+
+  .why-choose-capsules__column--center {
+    flex: 0 0 100%;
+    order: 3;
+  }
+
+  .why-choose-capsules__card--capsule,
+  .why-choose-capsules__card--image {
+    height: auto;
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .why-choose-capsules__content {
+    padding: 20px;
+  }
+
+  .why-choose-capsules__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .why-choose-capsules__grid {
+    flex-direction: column;
+  }
+
+  .why-choose-capsules__column,
+  .why-choose-capsules__column--left,
+  .why-choose-capsules__column--center,
+  .why-choose-capsules__column--right {
+    flex: 0 0 100%;
+  }
+
+  .why-choose-capsules__card--core,
+  .why-choose-capsules__card--stats,
+  .why-choose-capsules__card--capsule,
+  .why-choose-capsules__card--image {
+    min-height: auto;
+    height: auto;
+  }
+
+  .why-choose-capsules__main-image {
+    max-width: 100%;
+  }
+}

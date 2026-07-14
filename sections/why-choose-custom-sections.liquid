@@ -1,0 +1,676 @@
+{{ 'why-choose-capsules.css' | asset_url | stylesheet_tag }}
+
+<div class="why-choose-capsules color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div
+      class="why-choose-capsules__content global-section-radius"
+      style="
+        background: {{ section.settings.section_background }};
+        padding-top: {{ section.settings.content_padding_top }}px;
+        padding-right: {{ section.settings.content_padding_right }}px;
+        padding-bottom: {{ section.settings.content_padding_bottom }}px;
+        padding-left: {{ section.settings.content_padding_left }}px;
+      "
+    >
+      <div class="why-choose-capsules__header">
+
+        <h2 class="why-choose-capsules__heading h2">
+          {{ section.settings.heading }}
+        </h2>
+
+        {% if section.settings.button_label != blank %}
+          <a
+            href="{{ section.settings.button_link }}"
+            class="button button--secondary why-choose-capsules__button h4"
+          >
+            {{ section.settings.button_label }}
+          </a>
+        {% endif %}
+
+      </div>
+
+      <div
+        class="why-choose-capsules__grid"
+        style="gap: {{ section.settings.column_gap }}px;"
+      >
+
+        <div class="why-choose-capsules__column why-choose-capsules__column--left">
+
+          {% for block in section.blocks %}
+            {% case block.type %}
+
+                {% when 'core_card' %}
+  <div
+    class="why-choose-capsules__card why-choose-capsules__card--core"
+    {{ block.shopify_attributes }}
+    style="
+      background: {{ section.settings.card_background }};
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-right: {{ block.settings.padding_right }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+      padding-left: {{ block.settings.padding_left }}px;
+    "
+  >
+    {% if block.settings.heading != blank %}
+      <h6 class="why-choose-capsules__card-heading h6">
+        {{ block.settings.heading }}
+      </h6>
+    {% endif %}
+
+    <div class="why-choose-capsules__features">
+
+      {% if block.settings.icon_1 != blank or block.settings.text_1 != blank %}
+        <div class="why-choose-capsules__feature">
+
+          {% if block.settings.icon_1 != blank %}
+            {{
+              block.settings.icon_1
+              | image_url: width: 50
+              | image_tag:
+                class: 'why-choose-capsules__feature-icon',
+                loading: 'lazy'
+            }}
+          {% endif %}
+
+          {% if block.settings.text_1 != blank %}
+            <div class="why-choose-capsules__feature-text">
+              {{ block.settings.text_1 }}
+            </div>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+      {% if block.settings.icon_2 != blank or block.settings.text_2 != blank %}
+        <div class="why-choose-capsules__feature">
+
+          {% if block.settings.icon_2 != blank %}
+            {{
+              block.settings.icon_2
+              | image_url: width: 50
+              | image_tag:
+                class: 'why-choose-capsules__feature-icon',
+                loading: 'lazy'
+            }}
+          {% endif %}
+
+          {% if block.settings.text_2 != blank %}
+            <div class="why-choose-capsules__feature-text">
+              {{ block.settings.text_2 }}
+            </div>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+{% when 'stats_card' %}
+  <div
+    class="why-choose-capsules__card why-choose-capsules__card--stats"
+    {{ block.shopify_attributes }}
+    style="
+      background: {{ section.settings.card_background }};
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-right: {{ block.settings.padding_right }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+      padding-left: {{ block.settings.padding_left }}px;
+    "
+  >
+    {% if block.settings.number != blank %}
+      <div class="why-choose-capsules__number h0">
+        {{ block.settings.number }}
+      </div>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="why-choose-capsules__number-text">
+        {{ block.settings.description }}
+      </div>
+    {% endif %}
+
+    <div class="why-choose-capsules__badge">
+
+      {% if block.settings.badge_image != blank %}
+        {{
+          block.settings.badge_image
+          | image_url: width: 330
+          | image_tag:
+            class: 'why-choose-capsules__badge-image',
+            loading: 'lazy'
+        }}
+      {% endif %}
+
+      {% if block.settings.badge_text != blank %}
+        <div class="why-choose-capsules__badge-text">
+          {{ block.settings.badge_text }}
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endcase %}
+{% endfor %}
+
+</div>
+
+<div class="why-choose-capsules__column why-choose-capsules__column--center">
+
+{% for block in section.blocks %}
+{% case block.type %}
+    {% when 'capsule_card' %}
+  <div
+    class="why-choose-capsules__card why-choose-capsules__card--capsule"
+    {{ block.shopify_attributes }}
+    style="
+      background: {{ section.settings.card_background }};
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-right: {{ block.settings.padding_right }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+      padding-left: {{ block.settings.padding_left }}px;
+    "
+  >
+
+    {% if block.settings.top_text != blank %}
+      <div class="why-choose-capsules__capsule-top-text">
+        {{ block.settings.top_text }}
+      </div>
+    {% endif %}
+
+    <div class="why-choose-capsules__capsule-images">
+
+      {% if block.settings.arrow_image_1 != blank %}
+        {{
+          block.settings.arrow_image_1
+          | image_url: width: 300
+          | image_tag:
+            class: 'why-choose-capsules__arrow-image why-choose-capsules__arrow-image--first',
+            loading: 'lazy'
+        }}
+      {% endif %}
+
+      {% if block.settings.main_image != blank %}
+        {{
+          block.settings.main_image
+          | image_url: width: 900
+          | image_tag:
+            class: 'why-choose-capsules__main-image',
+            loading: 'lazy'
+        }}
+      {% endif %}
+
+      {% if block.settings.arrow_image_2 != blank %}
+        {{
+          block.settings.arrow_image_2
+          | image_url: width: 300
+          | image_tag:
+            class: 'why-choose-capsules__arrow-image why-choose-capsules__arrow-image--second',
+            loading: 'lazy'
+        }}
+      {% endif %}
+
+    </div>
+
+    {% if block.settings.bottom_text != blank %}
+      <div class="why-choose-capsules__capsule-bottom-text">
+        {{ block.settings.bottom_text }}
+      </div>
+    {% endif %}
+
+  </div>
+
+{% endcase %}
+{% endfor %}
+
+</div>
+
+<div class="why-choose-capsules__column why-choose-capsules__column--right">
+
+{% for block in section.blocks %}
+{% case block.type %}
+    {% when 'image_card' %}
+  <div
+    class="why-choose-capsules__card why-choose-capsules__card--image"
+    {{ block.shopify_attributes }}
+    style="
+      background: {{ section.settings.card_background }};
+      padding-top: {{ block.settings.padding_top }}px;
+      padding-right: {{ block.settings.padding_right }}px;
+      padding-bottom: {{ block.settings.padding_bottom }}px;
+      padding-left: {{ block.settings.padding_left }}px;
+    "
+  >
+    {% if block.settings.image != blank %}
+      {{
+        block.settings.image
+        | image_url: width: 900
+        | image_tag:
+          class: 'why-choose-capsules__image',
+          loading: 'lazy'
+      }}
+    {% endif %}
+  </div>
+
+{% endcase %}
+{% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Why Choose Capsules",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Choose Our Capsules?"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 28,
+      "label": "Top Padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_right",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Right Padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Bottom Padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_left",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Left Padding"
+    },
+    {
+      "type": "header",
+      "content": "Cards"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#F6F5F1"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 16,
+      "label": "Column Gap"
+    }
+  ],
+  "blocks": [
+    {
+  "type": "core_card",
+  "name": "Core Card",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Capsules"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "First Icon"
+    },
+    {
+      "type": "richtext",
+      "id": "text_1",
+      "label": "First Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Second Icon"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Second Text"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Left"
+    }
+  ]
+},
+{
+  "type": "stats_card",
+  "name": "Stats Card",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "number",
+      "label": "Number",
+      "default": "98%"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_image",
+      "label": "Badge Image"
+    },
+    {
+      "type": "richtext",
+      "id": "badge_text",
+      "label": "Badge Text"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24,
+      "label": "Left"
+    }
+  ]
+},
+{
+  "type": "capsule_card",
+  "name": "Capsule Card",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "top_text",
+      "label": "Top Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "arrow_image_1",
+      "label": "Top Arrow Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "arrow_image_2",
+      "label": "Bottom Arrow Image"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_text",
+      "label": "Bottom Text"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 28,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 28,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 28,
+      "label": "Left"
+    }
+  ]
+},
+{
+  "type": "image_card",
+  "name": "Image Card",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Top"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Right"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Bottom"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 20,
+      "label": "Left"
+    }
+  ]
+}
+],
+"presets": [
+  {
+    "name": "Why Choose Capsules",
+    "blocks": [
+      {
+        "type": "core_card"
+      },
+      {
+        "type": "stats_card"
+      },
+      {
+        "type": "capsule_card"
+      },
+      {
+        "type": "image_card"
+      }
+    ]
+  }
+]
+}
+{% endschema %}
