@@ -1,75 +1,245 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_87G6KQ": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_VaDVXM": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "image": "shopify://shop_images/image_23_0b297934-fda1-4d87-ab53-7bd8e4ff09df.png",
+            "image_overlay_opacity": 0,
+            "button_label_icon": "Available For Treatment",
+            "link_icon": "",
+            "button_style_secondary_icon": true,
+            "heading": "Capsules - that you can customize",
+            "heading_size": "h0",
+            "subheading": "K-CAPS® are free of preservatives, allergens and starches. We guide you through the process that incorporates your brand preferences.",
+            "button_label": "Get A Quote",
+            "link": "#",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide_44Kmef": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "image": "shopify://shop_images/image_23.png",
+            "image_overlay_opacity": 0,
+            "button_label_icon": "Button label",
+            "link_icon": "#",
+            "button_style_secondary_icon": true,
+            "heading": "Capsules - that you can customize",
+            "heading_size": "h0",
+            "subheading": "K-CAPS® are free of preservatives, allergens and starches. We guide you through the process that incorporates your brand preferences.",
+            "button_label": "Get A Quote",
+            "link": "#",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_VaDVXM",
+        "slide_44Kmef"
       ],
+      "name": "t:sections.slideshow.presets.name",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true,
+        "accessibility_info": ""
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "certifications_znP4DB": {
+      "type": "certifications",
+      "blocks": {
+        "certification_Cm8JxM": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000001036.png",
+            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+          }
+        },
+        "certification_Gfwytk": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000001035.png",
+            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+          }
+        },
+        "certification_fTrJ3Y": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000001034.png",
+            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+          }
+        },
+        "certification_TaJCb8": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000001036.png",
+            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "certification_Cm8JxM",
+        "certification_Gfwytk",
+        "certification_fTrJ3Y",
+        "certification_TaJCb8"
+      ],
+      "name": "Certifications",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "color_scheme": "scheme-5",
+        "heading": "Our Certifications",
+        "text": "<p>K-CAPS® are free of preservatives, allergens and starches. We guide you through the process that incorporates your brand preferences.</p>",
+        "padding_top": 32,
+        "padding_bottom": 20,
+        "padding_horizontal": 20,
+        "card_background": "#ffffff",
+        "card_hover_background": "#f6f7f1",
+        "card_border_color": "#eeeeee",
+        "card_radius": 16,
+        "icon_color": "#6e6e6e",
+        "icon_hover_color": "#1a6f50"
+      }
+    },
+    "featured_collection_zTxwxT": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "automated-collection",
+        "products_to_show": 9,
+        "title": "Best Selling Capsules",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "outline",
+        "color_scheme": "scheme-29cba3d6-6753-4fd2-bea8-6cff4513a075",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "why_choose_custom_sections_GkznMB": {
+      "type": "why-choose-custom-sections",
+      "blocks": {
+        "core_card_cL4NBK": {
+          "type": "core_card",
+          "settings": {
+            "heading": "OUR CORE",
+            "icon_1": "shopify://shop_images/Vector.png",
+            "text_1": "<p>K-CAPS® Serving from 30+ years</p>",
+            "icon_2": "shopify://shop_images/Vector_1.png",
+            "text_2": "<p>K-CAPS® Served 10+ Industries Worldwide</p>",
+            "padding_top": 24,
+            "padding_right": 24,
+            "padding_bottom": 24,
+            "padding_left": 24
+          }
+        },
+        "stats_card_U3PQXB": {
+          "type": "stats_card",
+          "settings": {
+            "number": "300K+",
+            "description": "<p>Capsules Produced</p>",
+            "badge_image": "shopify://shop_images/Frame_1000002711.png",
+            "badge_text": "<p>Made in North and South America\"</p>",
+            "padding_top": 36,
+            "padding_right": 24,
+            "padding_bottom": 32,
+            "padding_left": 24
+          }
+        },
+        "capsule_card_3hTAaw": {
+          "type": "capsule_card",
+          "settings": {
+            "top_text": "<p>K-CAPS® vegetarian capsules provide health-conscious consumers with a natural alternative to animal-derived capsules. </p>",
+            "arrow_image_1": "shopify://shop_images/Vector_1_8ec8a9af-4735-4d04-88f8-e486efa7e428.png",
+            "main_image": "shopify://shop_images/kcaps_clear_capsule_1_2_1.png",
+            "arrow_image_2": "shopify://shop_images/Vector_2.png",
+            "bottom_text": "<p>K-CAPS® are free of preservatives, allergens and starches and are NonGMO, Vegan certified and Kosher and Halal certified.</p>",
+            "padding_top": 20,
+            "padding_right": 28,
+            "padding_bottom": 28,
+            "padding_left": 28
+          }
+        },
+        "image_card_BKdnJD": {
+          "type": "image_card",
+          "settings": {
+            "image": "shopify://shop_images/image_30.jpg",
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20
+          }
+        }
+      },
+      "block_order": [
+        "core_card_cL4NBK",
+        "stats_card_U3PQXB",
+        "capsule_card_3hTAaw",
+        "image_card_BKdnJD"
+      ],
+      "name": "Why Choose Capsules",
+      "settings": {
+        "color_scheme": "",
+        "section_background": "#FFFFFF",
+        "heading": "Why Choose Our Capsules?",
+        "button_label": "Learn More",
+        "button_link": "",
+        "content_padding_top": 28,
+        "content_padding_right": 20,
+        "content_padding_bottom": 20,
+        "content_padding_left": 20,
+        "card_background": "#F6F5F1",
+        "column_gap": 16
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "slideshow_87G6KQ",
+    "certifications_znP4DB",
+    "featured_collection_zTxwxT",
+    "why_choose_custom_sections_GkznMB"
   ]
 }
