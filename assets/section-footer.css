@@ -430,6 +430,18 @@
   letter-spacing: 0;
 }
 
+.footer-block__brand-info a {
+  color: white;
+}
+
+.footer-block__brand-info a[href*="tel"] {
+  text-decoration: none;
+}
+
+.footer-block__brand-info a[href*="https://bigfolio.co/"] {
+  text-decoration: none;
+}
+
 .footer-block__brand-info .rte p {
   opacity: 60%;
 }
@@ -528,8 +540,8 @@
 
   /* custom css footer */
   .footer-block.grid__item:has(.footer-block__brand-info) {
-    max-width: 356px;
-    padding-right: 109px;
+    max-width: 335px;
+    margin-right: 90px;
 }
 
 @media (min-width: 749px) {
@@ -539,10 +551,11 @@
 
   .footer__blocks-wrapper {
     gap: 0;
+    justify-content: space-between;
   }
 
   .footer-block.grid__item:has(.footer-newsletter) {
-    max-width: 339px;
+    max-width: 290px;
   }
 }
 
@@ -569,20 +582,20 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 40px;
-  padding-right: 40px;
+  gap: 20px;
+  padding-right: 20px;
+  font-family: 'Switzer-Regular';
 }
 
 .footer-marquee__text {
   white-space: nowrap;
   font-size: 76px;
-  line-height: 1.1;
+  line-height: 1.2;
   color: rgba(255,255,255,.12);
+  letter-spacing: -2px;
 }
 
 .footer-marquee__icon {
-  width: 61px;
-  height: auto;
   flex-shrink: 0;
 }
 
