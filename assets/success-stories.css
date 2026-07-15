@@ -155,6 +155,10 @@ slider-component.success-stories__slider {
 }
 
 @media screen and (max-width: 749px) {
+  .success-stories__page-width {
+    padding-top: 0;
+  }
+
   .success-stories__header {
     row-gap: 20px;
     padding-bottom: 24px;
@@ -169,7 +173,7 @@ slider-component.success-stories__slider {
   }
 
   .success-stories__card {
-    padding: 20px;
+    padding: 28px;
   }
 
   .success-stories__icon {
@@ -188,5 +192,9 @@ slider-component.success-stories__slider {
 
   .success-stories__slider .slider-counter {
     display: none;
+  }
+
+  .success-stories__text {
+    line-height: 20px;
   }
 }

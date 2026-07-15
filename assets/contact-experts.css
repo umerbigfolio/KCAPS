@@ -97,11 +97,6 @@
 }
 
 @media screen and (max-width: 989px) {
-  .contact-experts__content {
-    flex-direction: column;
-    row-gap: 40px;
-  }
-
   .contact-experts__form,
   .contact-experts__media {
     width: 100%;
@@ -114,8 +109,9 @@
 
 @media screen and (max-width: 749px) {
   .contact-experts__content {
-    padding: 20px;
+    padding: 0;
     row-gap: 24px;
+    flex-wrap: wrap;
   }
 
   .contact-experts__heading {
@@ -128,5 +124,14 @@
 
   .contact-experts__image-placeholder {
     min-height: 350px;
+  }
+
+  .contact-experts__image-column,
+  .contact-experts__form-column {
+      width: 100%;
+  }
+
+  .contact-experts__image-column {
+    display: none;
   }
 }

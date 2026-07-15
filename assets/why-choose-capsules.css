@@ -293,9 +293,27 @@ img.why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--second {
   .why-choose-capsules__card--image {
     min-height: auto;
     height: auto;
+    max-height: 318px;
   }
 
   .why-choose-capsules__main-image {
     max-width: 100%;
+  }
+
+  .why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--first {
+    max-width: 117px;
+  }
+
+  .why-choose-capsules__main-image {
+        max-width: 176px;
+  }
+
+  img.why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--second {
+    max-width: 104px;
+  }
+
+  .why-choose-capsules .why-choose-capsules__capsule-top-text p,
+  .why-choose-capsules .why-choose-capsules__capsule-bottom-text p {
+    max-width: 195px;
   }
 }

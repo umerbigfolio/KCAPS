@@ -212,6 +212,18 @@
 }
 
 @media screen and (max-width: 749px) {
+  .applications-showcase__image-column {
+    order: 1;
+  }
+
+  .applications-showcase__text p {
+    line-height: 20px;
+  }
+
+  .applications-showcase {
+    padding: 20px 16px;
+  }
+
   .applications-showcase__overlay {
     width: calc(100% - 32px);
     bottom: 16px;
@@ -233,7 +245,7 @@
 
   .applications-showcase__number-text {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 3.4;
   }
 
   .applications-showcase__summary-title {

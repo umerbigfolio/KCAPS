@@ -33,6 +33,7 @@
     padding-bottom: 3rem;
     padding-left: calc(4rem / var(--font-body-scale));
     padding-right: calc(4rem / var(--font-body-scale));
+    padding: 16px;
   }
 }
 
@@ -606,5 +607,11 @@
 
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 749px) {
+  .footer-marquee__text {
+    font-size: 40px;
   }
 }
