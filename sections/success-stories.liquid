@@ -37,35 +37,13 @@
 
       </div>
 
-      <div class="success-stories__slider-controls no-js-hidden">
-        <button
-          type="button"
-          class="slider-button slider-button--prev"
-          name="previous"
-          aria-label="{{ 'general.slider.previous_slide' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'slider-prev-icon' %}
-        </button>
-
-        <button
-          type="button"
-          class="slider-button slider-button--next"
-          name="next"
-          aria-label="{{ 'general.slider.next_slide' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'slider-next-arrow' %}
-        </button>
-      </div>
-
     </div>
 
     <slider-component class="success-stories__slider">
 
       <ul
         id="Slider-{{ section.id }}"
-        class="success-stories__list slider slider--desktop grid grid--3-col-desktop grid--1-col-tablet-down"
+        class="success-stories__list slider slider--desktop grid"
         role="list"
         aria-label="{{ section.settings.heading }}"
       >
@@ -120,6 +98,28 @@
         {% endfor %}
 
       </ul>
+
+      <div class="success-stories__slider-controls no-js-hidden">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'slider-prev-icon' %}
+        </button>
+
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
+        >
+          {% render 'slider-next-arrow' %}
+        </button>
+      </div>
 
     </slider-component>
 

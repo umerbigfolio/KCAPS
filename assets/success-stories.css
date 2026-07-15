@@ -1,3 +1,7 @@
+slider-component.success-stories__slider {
+  position: initial;
+}
+
 .success-stories__page-width {
   padding-top: var(--success-stories-padding-top);
   padding-bottom: var(--success-stories-padding-bottom);
@@ -5,6 +9,11 @@
 
 .success-stories {
   overflow: hidden;
+  position: relative;
+}
+
+.success-stories__page-width .slider-button {
+  border-color: rgb(var(--color-foreground));
 }
 
 .success-stories__header {
@@ -27,6 +36,7 @@
   line-height: 24px;
   letter-spacing: 0;
   font-family: 'HelveticaNeueRegular';
+  opacity: 70%;
 }
 
 .success-stories__slider-controls {
@@ -34,6 +44,9 @@
   align-items: center;
   column-gap: 8px;
   flex-shrink: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .success-stories__slider .slider {
@@ -90,7 +103,7 @@
   font-family: "HelveticaNeueRegular", sans-serif;
   line-height: 20px;
   letter-spacing: 0;
-  color: #000000;
+  color: #474B54;
 }
 
 .success-stories__slider .slider-button {
