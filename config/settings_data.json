@@ -109,7 +109,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p>Premium plant-based HPMC capsules trusted by supplement and pharmaceutical brands worldwide, delivering consistent quality, purity, and reliable performance.<br/><br/>Email us @ info@kcaps.comCall us at - 1-844-435-8337<br/><br/>© 2026, K-CAPS • Developed by Bigfolio LLC</p>",
+    "brand_description": "<p>Premium plant-based HPMC capsules trusted by supplement and pharmaceutical brands worldwide, delivering consistent quality, purity, and reliable performance.<br/><br/>Email us @ <a href=\"mailto:info@kcaps.com\" target=\"_blank\" title=\"info@kcaps.com\">info@kcaps.com</a><br/>Call us at - <a href=\"tel:1-844-435-8337\" target=\"_blank\" title=\"1-844-435-8337\">1-844-435-8337</a><br/><br/>© 2026, K-CAPS • Developed by <a href=\"https://bigfolio.co/\" target=\"_blank\" title=\"https://bigfolio.co/\">Bigfolio LLC</a></p>",
     "brand_image": "shopify://shop_images/Capa_1_1.png",
     "brand_image_width": 120,
     "social_facebook_link": "#",
@@ -185,7 +185,7 @@
           "background_gradient": "",
           "text": "#000000",
           "button": "#1a6f50",
-          "button_label": "#FFFFFF",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
