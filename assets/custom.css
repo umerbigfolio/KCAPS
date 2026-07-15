@@ -150,6 +150,36 @@
     padding-top: 1.6rem;
 }
 
+.header__submenu.list-menu {
+    padding: 0;
+    border-radius: 20px;
+    background: white;
+    min-width: 255px;
+    box-shadow: 0px 4px 14px 0px #00000026;
+}
+
+.header__submenu .header__menu-item {
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.menu-drawer__footer-button .button {
+    width: 100%;
+    padding: 13px 20px;
+    justify-content: space-between;
+    font-family: 'HelveticaNeueRegular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.menu-drawer__footer-button svg path {
+    fill: white;
+}
+
 @media screen and (min-width: 990px) {
     .success-stories__slider .slider--desktop:after {
         padding-left: 0;
