@@ -55,13 +55,13 @@
   transition:
     background-color .3s ease,
     transform .3s ease;
-  cursor: pointer;  
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .certifications__card:hover {
   background: var(--certifications-card-hover-background);
   border-color: transparent;
-  transition: 0.3s ease-in-out;
 }
 
 .certifications__card-content {
@@ -88,6 +88,7 @@
   height: 123px;
   display: block;
   object-fit: contain;
+  transition: color .3s ease;
 }
 
 .certifications__icon svg {
@@ -119,15 +120,21 @@
 }
 
 .certifications__icon .certifications__icon-image-hover {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
 }
 
 .certifications__card:hover .certifications__icon-image {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
 }
 
 .certifications__card:hover .certifications__icon-image-hover {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  width: auto;
 }
 
 @media screen and (max-width: 1199px) {

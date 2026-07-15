@@ -258,16 +258,6 @@ img.why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--second {
     flex-wrap: wrap;
   }
 
-  .why-choose-capsules__column--left,
-  .why-choose-capsules__column--right {
-    flex: 0 0 calc(50% - (var(--column-gap) / 2));
-  }
-
-  .why-choose-capsules__column--center {
-    flex: 0 0 100%;
-    order: 3;
-  }
-
   .why-choose-capsules__card--capsule,
   .why-choose-capsules__card--image {
     height: auto;
