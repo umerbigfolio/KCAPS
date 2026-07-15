@@ -8,7 +8,7 @@
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
       #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.mobile_image .aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
       }
@@ -138,7 +138,7 @@
                 assign fetch_priority = 'high'
               endif
             -%}
-            {%- if forloop.first %}
+            {% comment %} {%- if forloop.first %}
               {{
                 block.settings.image
                 | image_url: width: 3840
@@ -150,7 +150,30 @@
                 | image_url: width: 3840
                 | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
               }}
-            {%- endif -%}
+            {%- endif -%} {% endcomment %}
+             <picture>
+              {% if block.settings.mobile_image != blank %}
+                <source
+                  media="(max-width: 749px)"
+                  srcset="
+                    {{ block.settings.mobile_image | image_url: width: 375 }} 375w,
+                    {{ block.settings.mobile_image | image_url: width: 550 }} 550w,
+                    {{ block.settings.mobile_image | image_url: width: 750 }} 750w,
+                    {{ block.settings.mobile_image | image_url: width: 1100 }} 1100w
+                  "
+                >
+              {% endif %}
+
+              {{
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag:
+                  height: height,
+                  sizes: sizes,
+                  widths: widths,
+                  fetchpriority: fetch_priority
+              }}
+            </picture>
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
             {%- if placeholder_slide == 1 -%}
@@ -414,6 +437,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image"
         },
         {
           "type": "range",

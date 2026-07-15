@@ -283,3 +283,9 @@ slideshow-component .slider-button {
     width: 46px;
     height: 46px;
 }
+
+@media (max-width: 749px) {
+  .banner__content {
+    align-items: start;
+  }
+}
