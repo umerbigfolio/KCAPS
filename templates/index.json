@@ -77,15 +77,7 @@
         "certification_Cm8JxM": {
           "type": "certification",
           "settings": {
-            "image": "shopify://shop_images/Group_1000001036.png",
-            "image_hover": "shopify://shop_images/Group_1000001033.png",
-            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
-          }
-        },
-        "certification_Gfwytk": {
-          "type": "certification",
-          "settings": {
-            "image": "shopify://shop_images/Group_1000001035.png",
+            "image": "shopify://shop_images/image_48.png",
             "image_hover": "shopify://shop_images/Group_1000001033.png",
             "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
           }
@@ -94,7 +86,15 @@
           "type": "certification",
           "settings": {
             "image": "shopify://shop_images/Group_1000001034.png",
-            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "image_hover": "shopify://shop_images/image_47.png",
+            "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
+          }
+        },
+        "certification_Gfwytk": {
+          "type": "certification",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000001035.png",
+            "image_hover": "shopify://shop_images/image_49_2x_7cd6ba98-4fc1-493c-8dac-12fb434efc16.png",
             "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
           }
         },
@@ -102,15 +102,15 @@
           "type": "certification",
           "settings": {
             "image": "shopify://shop_images/Group_1000001036.png",
-            "image_hover": "shopify://shop_images/Group_1000001033.png",
+            "image_hover": "shopify://shop_images/image_46.png",
             "description": "<p>We guide you through the process that incorporates your brand preferences.</p>"
           }
         }
       },
       "block_order": [
         "certification_Cm8JxM",
-        "certification_Gfwytk",
         "certification_fTrJ3Y",
+        "certification_Gfwytk",
         "certification_TaJCb8"
       ],
       "name": "Certifications",
@@ -360,14 +360,14 @@
       "name": "Success Stories",
       "settings": {
         "color_scheme": "scheme-3",
-        "section_background": "#FFFFFF",
+        "section_background": "#ffffff",
         "heading": "Our Success From - Their Word",
         "text": "Hear what our clients say about working with us and their success stories.",
         "content_padding_top": 20,
         "content_padding_right": 20,
         "content_padding_bottom": 20,
         "content_padding_left": 20,
-        "card_background": "#F6F5F1",
+        "card_background": "#f6f5f1",
         "card_radius": 16,
         "padding_top": 40,
         "padding_bottom": 40
