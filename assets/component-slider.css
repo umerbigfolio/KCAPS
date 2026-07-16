@@ -266,7 +266,7 @@ slider-component.slider-component-full-width {
 .slider-counter__link--dots .dot {
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: 32px;
   border: none;
   padding: 0;
   display: block;

@@ -206,7 +206,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   gap: 12px;
   padding-left: 24px;
   padding-right: 24px;
-  line-height: 22px;
+  line-height: 52px;
   letter-spacing: 0;
   margin: 0;
   font-family: 'HelveticaNeueRegular';
@@ -228,7 +228,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .slideshow .banner__buttons .slideshow-button-with-icon {
     color: black;
-    line-height: 100%;
+    line-height: 29px;
     letter-spacing: 0;
     font-family: HelveticaNeueRegular;
     gap: 6px;
