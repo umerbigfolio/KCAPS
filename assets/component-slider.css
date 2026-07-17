@@ -347,6 +347,16 @@ slider-component.slider-component-full-width {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1.25 solid;
+  transition: 0.3s ease-in-out;
+}
+
+.slider-button:hover {
+  background: rgba(var(--color-foreground));
+}
+
+.slider-button:hover path {
+  fill: white;
 }
 
 .slider-button:not([disabled]):hover {

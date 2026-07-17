@@ -206,10 +206,9 @@ slideshow-component:not(.page-width) .slider-buttons {
   gap: 12px;
   padding-left: 24px;
   padding-right: 24px;
-  line-height: 52px;
+  line-height: initial;
   letter-spacing: 0;
   margin: 0;
-  font-family: 'HelveticaNeueRegular';
   text-transform: uppercase;
   min-height: 52px;
 }
@@ -228,7 +227,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .slideshow .banner__buttons .slideshow-button-with-icon {
     color: black;
-    line-height: 29px;
+    line-height: 1;
     letter-spacing: 0;
     font-family: HelveticaNeueRegular;
     gap: 6px;

@@ -195,7 +195,8 @@
               aria-controls="Slider-{{ section.id }}"
             >
               <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
+                {% render 'slider-prev-icon' %}
               </span>
             </button>
             <div class="slider-counter caption">
@@ -212,7 +213,8 @@
               aria-controls="Slider-{{ section.id }}"
             >
               <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
+                {% render 'slider-next-arrow' %}
               </span>
             </button>
           </div>

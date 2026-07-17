@@ -38,14 +38,13 @@
 }
 
 .header__button .button {
-    padding: 13px 18px 13px 20px;
+    padding: 13px 18px 11px 20px;
     font-weight: 400;
     line-height: initial;
     letter-spacing: 0%;
     text-transform: uppercase;
     gap: 12px;
     margin: 0;
-    font-family: 'HelveticaNeueRegular';
     min-width: 196px;
 }
 
@@ -85,17 +84,22 @@
     padding-left: 20px;
 }
 
-.collection__view-all .button::after {
+.collection__view-all .button {
     border: 1px solid #E2E2E2;
     box-shadow: none;
 }
 
 .collection__view-all .button {
-    line-height: 22px;
+    line-height: initial;
     letter-spacing: 0;
-    padding: 15px 24px;
+    padding: 15px 24px 13px 24px;
     text-transform: uppercase;
     gap: 12px;
+    height: 50px;
+}
+
+.collection__view-all .button:hover svg path {
+    fill: white;
 }
 
 .collection  .collection__title .title:not(:only-child) {
@@ -181,6 +185,105 @@
     fill: white;
 }
 
+/* product feature card css  */
+.collection slider-component {
+    padding-left: 0;
+}
+
+slider-component .slider {
+    gap: 16px;
+}
+
+.card-wrapper.product-card-wrapper {
+    padding: 40px;
+    background: #F6F5F1;
+    border-radius: var(--product-card-corner-radius);
+}
+
+.card-wrapper.product-card-wrapper .card__inner {
+    height: 264px;
+    width: 264px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.product-card-wrapper .card__media {
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-wrapper.product-card-wrapper .card--card.card--media>.card__content,
+.card-wrapper.product-card-wrapper .card__information,
+.card-wrapper.product-card-wrapper .card--media .card__inner .card__content {
+    padding: 0;
+}
+
+.card-wrapper.product-card-wrapper .card__content .card__heading,
+.card-wrapper.product-card-wrapper .card__content .card__information {
+    display: none;
+}
+
+.product-card__title a {
+    font-family: 'HelveticaNeueRegular';
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.48px;
+    text-align: center;
+}
+
+.product-card__title {
+    min-height: 60px;
+}
+
+.product-card__button .button {
+    line-height: 18px;
+    min-height: 50px;
+}
+
+.product-card__metafield {
+    padding-top: 16px;
+    font-family: 'HelveticaNeueRegular';
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0%;
+}
+
+.card__content .card__badge {
+    display: none;
+}
+
+.collection .slider--desktop {
+    margin-bottom: 32px;
+}
+
+.collection .slider-counter {
+    display: none;;
+}
+
+.collection .slider-buttons {
+    gap: 8px;
+}
+
+@media (max-width: 749px) {
+    .collection .collection__view-all {
+        display: none;
+    }
+
+    .collection .grid--peek.slider .grid__item:first-of-type {
+        margin-left: 0
+    }
+
+    .collection__title.title-wrapper {
+        padding: 0;
+    }
+
+    .product-card__title a {
+        font-size: 24px;
+    }
+}
+
 @media screen and (min-width: 990px) {
     .success-stories__slider .slider--desktop:after {
         padding-left: 0;
@@ -239,11 +342,6 @@
         min-height: 44px;
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .button {
-        padding: 0 24px;
-        min-height: 52px;
     }
 
     .why-choose-capsules .why-choose-capsules__capsule-top-text p,

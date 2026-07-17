@@ -274,6 +274,10 @@
   align-self: flex-end;
   grid-row-start: 3;
   justify-self: flex-start;
+  top: 12px;
+  position: absolute;
+  left: 12px;
+  line-height: initial;
 }
 
 .card__badge.top {
@@ -401,10 +405,10 @@
     transform: scale(1.03);
   }
 
-  .underline-links-hover:hover a {
+  /* .underline-links-hover:hover a {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-  }
+  } */
 }
 
 .card--standard.card--media .card__inner .card__information,
