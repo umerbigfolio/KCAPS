@@ -152,7 +152,7 @@ slider-component.slider-component-full-width {
   .slider--desktop:after {
     content: '';
     width: 0;
-    padding-left: 5rem;
+    padding-left: 2rem;
     margin-left: calc(-1 * var(--grid-desktop-horizontal-spacing));
   }
 
