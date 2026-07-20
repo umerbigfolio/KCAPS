@@ -23,6 +23,7 @@
 
 .instagram-gallery__button {
   white-space: nowrap;
+  margin: 0;
 }
 
 .instagram-gallery__grid {

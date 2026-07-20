@@ -143,13 +143,15 @@
                 </summary>
 
                 <div
-                  class="applications-showcase__accordion-content rte"
+                  class="applications-showcase__accordion-content"
                   id="Accordion-{{ block.id }}-{{ section.id }}"
                   role="region"
                   aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
                 >
 
-                  {{ block.settings.content }}
+                  <div class="applications-showcase__accordion-content-inner rte">
+                    {{ block.settings.content }}
+                  </div>
 
                 </div>
 
@@ -167,6 +169,7 @@
   </div>
 </div>
 
+{{ 'application-showcase.js' | asset_url | script_tag }}
 {% schema %}
 {
   "name": "Applications Showcase",

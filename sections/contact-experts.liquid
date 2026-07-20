@@ -114,6 +114,36 @@
                 </div>
             </div>
             <div class="field">
+              <input
+                type="text"
+                id="ContactForm-company"
+                class="field__input"
+                name="contact[Company Name]"
+                value="{% if form.company %}{{ form.company }}{% endif %}"
+                placeholder="Company Name"
+              >
+              <label class="field__label" for="ContactForm-company">
+                Company Name
+              </label>
+            </div>
+
+            <div class="field field--with-error">
+              <input
+                type="email"
+                id="ContactForm-work-email"
+                class="field__input"
+                name="contact[Work Email]"
+                autocomplete="email"
+                spellcheck="false"
+                autocapitalize="off"
+                value=""
+                placeholder="Work Email"
+              >
+              <label class="field__label" for="ContactForm-work-email">
+                Work Email
+              </label>
+            </div>
+            <div class="field">
                 <input
                 type="tel"
                 id="ContactForm-phone"
@@ -128,7 +158,7 @@
             </div>
             <div class="field">
                 <textarea
-                rows="10"
+                rows="30"
                 id="ContactForm-body"
                 class="text-area field__input"
                 name="contact[{{ 'templates.contact.form.comment' | t }}]"

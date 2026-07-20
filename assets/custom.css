@@ -148,6 +148,7 @@
     letter-spacing: 0%;
     color: black;
     opacity: 70%;
+    padding-top: 8px;
 }
 
 .article-card-wrapper .card__information {
@@ -181,9 +182,13 @@
     text-transform: uppercase;
 }
 
-.menu-drawer__footer-button svg path {
+.menu-drawer__footer-button .button svg path {
     fill: white;
 }
+
+/* .menu-drawer__footer-button .button:hover svg path {
+    fill: rgba(var(--color-button), var(--alpha-button-background));
+} */
 
 /* product feature card css  */
 .collection slider-component {
@@ -399,7 +404,7 @@ slider-component .slider {
     }
 
     .announcement-bar__message {
-        font-size: 11px;
+        font-size: 14px;
     }
     
     .slideshow.banner .banner__box {
@@ -428,5 +433,16 @@ slider-component .slider {
 
     .why-choose-capsules__header {
         padding-bottom: 24px;
+    }
+
+    .header__heading-logo {
+        width: 99px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 430px) {
+    .announcement-bar__message {
+        font-size: 11px;
     }
 }

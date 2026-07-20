@@ -60,6 +60,7 @@
   height: auto;
   object-fit: cover;
   border-radius: 16px;
+  max-height: 567px;
 }
 
 .applications-showcase__overlay {
@@ -184,6 +185,17 @@
 .page-width.applications-showcase {
   padding-top: var(--applications-showcase-padding-top);
   padding-bottom: var(--applications-showcase-padding-bottom);
+}
+
+/* Animation */
+.applications-showcase__accordion-content {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    height 0.35s ease,
+    opacity 0.25s ease;
 }
 
 @media screen and (max-width: 989px) {
