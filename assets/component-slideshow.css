@@ -233,6 +233,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     min-height: 29px;
     text-transform: capitalize;
     padding: 0 15px;
+    background: transparent;
 }
 
 .slideshow-button-with-icon::after {
@@ -242,6 +243,10 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .slideshow .slideshow__media {
   background: white;
+}
+
+.slideshow .slideshow__media img {
+  height: 100%;
 }
 
 .slideshow__text .banner__heading {
@@ -262,6 +267,12 @@ slideshow-component:not(.page-width) .slider-buttons {
     line-height: 23px;
     letter-spacing: 0;
     opacity: 70%;
+}
+
+@media (max-width: 749px) {
+  .slideshow .banner__text.rte p {
+    font-size: 16px;
+  }
 }
 
 slideshow-component .banner__box>*+.banner__buttons {

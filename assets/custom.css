@@ -67,7 +67,7 @@
 .section-header.scrolled-past-header .header-wrapper .header {
     margin-top: 20px;
     background: rgb(255, 255, 255);
-    border-radius: 8px;
+    border-radius: var(--product-card-corner-radius);
     box-shadow: 0px 39px 25px 0px #0000001A;
     border: 2px solid rgba(26, 111, 80, 0.25);
 }
@@ -253,6 +253,7 @@ slider-component .slider {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: 0%;
+    color: #474B54;
 }
 
 .card__content .card__badge {
@@ -272,6 +273,10 @@ slider-component .slider {
 }
 
 @media (max-width: 749px) {
+    .feature-collection-internal-padding {
+        padding-left: 16px;
+    }
+
     .collection .collection__view-all {
         display: none;
     }
@@ -286,6 +291,27 @@ slider-component .slider {
 
     .product-card__title a {
         font-size: 24px;
+    }
+
+    /* Menu custom css  */
+    .js details[open].menu-opening>.menu-drawer {
+        height: auto;
+        overflow-y: auto;
+        max-height: 80vh;
+    }
+
+    .menu-drawer__menu .menu-drawer__submenu.has-submenu {
+        position: unset;
+        visibility: visible;
+        transform: unset;
+        padding: 10px 0;
+        padding-left: 10px;
+    }
+
+    details[open].menu-opening>.menu-drawer__submenu {
+        background: #fff;
+        border-radius: 24px;
+        overflow: hidden;
     }
 }
 
@@ -355,10 +381,6 @@ slider-component .slider {
         line-height: 16px;
     }
 
-    .applications-showcase .applications-showcase__summary-title {
-        font-size: 20px; 
-    }
-
     .applications-showcase .applications-showcase__summary {
         padding: 8px 0;
     }
@@ -375,6 +397,10 @@ slider-component .slider {
 
 /* mobile view */
 @media (max-width: 749px) {
+    .blog .title-wrapper-with-link h2 {
+        font-size: 32px;
+    }
+    
     .blog .blog-header-text__text.h5 {
         line-height: 20px;
         padding-bottom: 16px;
@@ -409,6 +435,10 @@ slider-component .slider {
     
     .slideshow.banner .banner__box {
         padding: 28px 24px;
+        border-radius: var(--product-card-corner-radius);
+        background: white;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     
     slideshow-component .slideshow .banner__buttons .button.slideshow-button-with-icon {
@@ -418,7 +448,8 @@ slider-component .slider {
     }
 
     .slideshow__text .banner__heading {
-        line-height: 48%;;
+        line-height: 48%;
+        max-width: 265px;
     }
 
     .shopify-section slideshow-component .slider-buttons {
@@ -429,10 +460,6 @@ slider-component .slider {
 
     slideshow-component .slider-button {
         display: none;
-    }
-
-    .why-choose-capsules__header {
-        padding-bottom: 24px;
     }
 
     .header__heading-logo {

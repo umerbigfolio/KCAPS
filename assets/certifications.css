@@ -156,6 +156,7 @@
   .certifications__header {
     flex-direction: column;
     gap: 16px;
+    padding-bottom: 24px;
   }
 
   .certifications__text {
@@ -164,6 +165,15 @@
 }
 
 @media screen and (max-width: 749px) {
+
+  .certifications {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .certifications__text p {
+    line-height: 20px;
+  }
 
   .certifications__content {
     padding: 20px;
@@ -179,9 +189,10 @@
   }
 
   .certifications__card-content {
-    height: auto;
+    height: 182px;
     padding: 15px;
     row-gap: 14px;
+    justify-content: center;
   }
 
   .certifications__icon,

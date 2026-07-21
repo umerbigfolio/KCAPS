@@ -124,7 +124,7 @@
   }
 
   .instagram-gallery__item {
-    flex: 0 0 calc(50% - 16px);
+    flex: 0 0 calc(50% - 8px);
     scroll-snap-align: start;
   }
 }

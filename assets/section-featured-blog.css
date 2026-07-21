@@ -73,3 +73,14 @@
     line-height: 150%;
     letter-spacing: -2%;
 }
+
+@media (max-width: 749px) {
+  .article-card-wrapper .card__heading.h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .blog__posts.articles-wrapper {
+    row-gap: 16px;
+  }
+}

@@ -155,8 +155,17 @@ slider-component.success-stories__slider {
 }
 
 @media screen and (max-width: 749px) {
+  .success-stories__company-name {
+    font-size: 16px;
+  }
+
+  .success-stories__review {
+    line-height: 21px;
+  }
+
   .success-stories__page-width {
     padding-top: 0;
+    padding-bottom: 16px;
   }
 
   .success-stories__header {
@@ -176,14 +185,6 @@ slider-component.success-stories__slider {
     padding: 28px;
   }
 
-  .success-stories__icon {
-    margin-bottom: 24px;
-  }
-
-  .success-stories__review {
-    margin-bottom: 24px;
-  }
-
   .success-stories__slider .slider-buttons {
     display: flex;
     justify-content: center;
@@ -196,5 +197,9 @@ slider-component.success-stories__slider {
 
   .success-stories__text {
     line-height: 20px;
+  }
+
+  .success-stories {
+    padding: 20px 16px !important;
   }
 }

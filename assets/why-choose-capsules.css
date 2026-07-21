@@ -266,8 +266,13 @@ img.why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--second {
 }
 
 @media screen and (max-width: 749px) {
+  .why-choose-capsules__header {
+    padding-bottom: 24px;
+  }
+
   .why-choose-capsules__content {
-    padding: 20px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .why-choose-capsules__header {
@@ -287,13 +292,19 @@ img.why-choose-capsules__arrow-image.why-choose-capsules__arrow-image--second {
     flex: 0 0 100%;
   }
 
-  .why-choose-capsules__card--core,
-  .why-choose-capsules__card--stats,
-  .why-choose-capsules__card--capsule,
   .why-choose-capsules__card--image {
+    max-height: 318px;
     min-height: auto;
     height: auto;
-    max-height: 318px;
+  }
+
+  .why-choose-capsules__card--core,
+  .why-choose-capsules__card--stats {
+    padding: 26px 23px !important;
+  }
+
+  .why-choose-capsules__card--capsule {
+    padding: 16px !important;
   }
 
   .why-choose-capsules__main-image {
