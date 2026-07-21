@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/image_banner.webp",
+            "mobile_image": "shopify://shop_images/Screenshot_3.png",
             "image_overlay_opacity": 0,
             "button_label_icon": "Available For Treatment",
             "link_icon": "",
@@ -67,7 +68,7 @@
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
-        "show_text_below": false,
+        "show_text_below": true,
         "accessibility_info": ""
       }
     },
